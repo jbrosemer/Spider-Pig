@@ -39,6 +39,7 @@ try:
         elif x == 's':
             if angle > 0:
                 angle -= 1
+        kit.servo[outerShoulderLeft].angle = angle
 except KeyboardInterrupt:
     Servos = 0
     while Servos < 16:
