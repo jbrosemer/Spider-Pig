@@ -39,11 +39,8 @@ try:
         elif x == 's':
             if angle > 0:
                 angle -= 1
-
-
-
 except KeyboardInterrupt:
-    #Servos = 0
-    #while Servos < 16:
-     #   kit.servo[Servos].angle = 90
-     #   Servos+=1
+    Servos = 0
+    while Servos < 16:
+        kit.servo[Servos].angle = 90
+        Servos+=1
