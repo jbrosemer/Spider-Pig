@@ -57,7 +57,7 @@ try:
         kit.servo[outerShoulderLeft].angle = angle0
         kit.servo[outerShoulderRight].angle = angle0
         kit.servo[outerElbowLeft].angle = angle1
-        kit.servo[outerElboRight].angle = angle1
+        kit.servo[outerElbowRight].angle = angle1
 except KeyboardInterrupt:
     Servos = 0
     while Servos < 16:
