@@ -31,6 +31,7 @@ innerWristRight = 11
 angle = 90
 try:
     kit.servo[outerShoulderLeft].angle = angle
+    print(str(angle))
     while True:
         x = input()
         if x == 'a':
