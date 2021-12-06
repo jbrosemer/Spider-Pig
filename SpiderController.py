@@ -6,16 +6,9 @@ kit = ServoKit(channels=16)
 
 import curses
 
-# get the curses screen window
 screen = curses.initscr()
-
-# turn off input echoing
 curses.noecho()
-
-# respond to keys immediately (don't wait for enter)
 curses.cbreak()
-
-# map arrow keys to special values
 screen.keypad(True)
 
 # OUTER SHOULDERS
@@ -49,11 +42,10 @@ try:
     print(str(angle))
     while True:
         char = screen.getch()
-        x = input("please")
-        if char == curses.KEY_RIGHT:
+        if char == ord('q'):
             if angle < 180:
                 angle += 1
-        if char == curses.KEY_LEFT:
+        if char == ord('a'):
             if angle > 0:
                 angle -= 1
         kit.servo[outerShoulderLeft].angle = angle
