@@ -1,4 +1,5 @@
 from adafruit_servokit import ServoKit
+from pynput import keyboard
 kit = ServoKit(channels=16)
 # SERVO INT DEFINITIONS
 # OUTER ARMS
@@ -30,7 +31,7 @@ innerWristRight = 11
 
 try:
     while True:
-
+        
 
 except KeyboardInterrupt:
     Servos = 0
