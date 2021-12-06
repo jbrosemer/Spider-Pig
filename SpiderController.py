@@ -1,5 +1,5 @@
 from adafruit_servokit import ServoKit
-from pynput import keyboard
+# from pynput import keyboard
 kit = ServoKit(channels=16)
 # SERVO INT DEFINITIONS
 # OUTER ARMS
