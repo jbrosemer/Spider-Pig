@@ -38,6 +38,8 @@ innerWristRight = 11
 angle0 = 90
 angle1 = 90
 angle2 = 90
+angle6 = 90
+angle8 = 90
 try:
     kit.servo[outerShoulderLeft].angle = angle0
     while True:
@@ -52,21 +54,31 @@ try:
             if angle1 < 180:
                 angle1 += 1
         if char == ord('w'):
-            if angle0 > 0:
+            if angle1 > 0:
                 angle1 -= 1
+        if char == ord('l'):
+            if angle6 < 180:
+                angle6 += 1
+        if char == ord('p'):
+            if angle6 > 0:
+                angle6 -= 1
+        if char == ord('k'):
+            if angle8 < 180:
+                angle8 += 1
+        if char == ord('o'):
+            if angle8 > 0:
+                angle8 -= 1
         kit.servo[outerShoulderLeft].angle = angle0
         kit.servo[outerShoulderRight].angle = angle0
         kit.servo[outerElbowLeft].angle = angle1
         kit.servo[outerElbowRight].angle = angle1
+        kit.servo[innerElbowLeft].angle = angle8
+        kit.servo[innerShoulderRight].angle = angle6
         #DO A PULLUP
         #SERVOS THAT SHOULD BE PAIRED
         #ALL SHOULDERS TURN CLOCKWISE
         #ALL ELBOWS TURN COUNTERCLOCKWISE
 except KeyboardInterrupt:
-    Servos = 0
-    while Servos < 16:
-        kit.servo[Servos].angle = 90
-        Servos+=1   
     curses.nocbreak()
     screen.keypad(False)
     curses.echo()
