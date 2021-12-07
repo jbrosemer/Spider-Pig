@@ -35,19 +35,35 @@ innerElbowRight = 7
 # INNER WRISTS
 innerWristLeft = 5
 innerWristRight = 8
-angle0 = 90
+angle4 = 90
+angle5 = 90
+angle6 = 90
 try:
     while True:
         char = screen.getch()
 
         if char == ord('q'):
-            if angle0 < 180:
-                angle0 += 1
+            if angle4 < 180:
+                angle4 += 1
         if char == ord('a'):
-            if angle0 > 0:
-                angle0 -= 1
+            if angle4 > 0:
+                angle4 -= 1
+        if char == ord('s'):
+            if angle5 < 180:
+                angle5 += 1
+        if char == ord('w'):
+            if angle5 > 0:
+                angle5 -= 1
+        if char == ord('d'):
+            if angle6 < 180:
+                angle6 += 1
+        if char == ord('e'):
+            if angle6 > 0:
+                angle6 -= 1
 
-        kit.servo[outerElbowLeft].angle = angle0
+        kit.servo[innerShoulderLeft].angle = angle4
+        kit.servo[innerElbowLeft].angle = angle5
+        kit.servo[innerWristLeft].angle = angle6
 except KeyboardInterrupt:
     curses.nocbreak()
     screen.keypad(False)
