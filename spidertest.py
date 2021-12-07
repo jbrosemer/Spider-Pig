@@ -61,9 +61,9 @@ try:
             if angle6 > 0:
                 angle6 -= 1
 
-        kit.servo[innerShoulderLeft].angle = angle4
-        kit.servo[innerElbowLeft].angle = angle5
-        kit.servo[innerWristLeft].angle = angle6
+        kit.servo[innerShoulderRight].angle = angle4
+        kit.servo[innerElbowRight].angle = angle5
+        kit.servo[innerWristRight].angle = angle6
 except KeyboardInterrupt:
     curses.nocbreak()
     screen.keypad(False)
