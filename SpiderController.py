@@ -58,8 +58,17 @@ try:
         kit.servo[outerShoulderRight].angle = angle0
         kit.servo[outerElbowLeft].angle = angle1
         kit.servo[outerElbowRight].angle = angle1
+        #DO A PULLUP
+        #SERVOS THAT SHOULD BE PAIRED
+        #ALL SHOULDERS TURN CLOCKWISE
+        #ALL ELBOWS TURN COUNTERCLOCKWISE
 except KeyboardInterrupt:
     Servos = 0
     while Servos < 16:
         kit.servo[Servos].angle = 90
         Servos+=1
+    kit.pwm(0, 0, 0)
+    curses.nocbreak()
+    screen.keypad(False)
+    curses.echo()
+    curses.endwin()
