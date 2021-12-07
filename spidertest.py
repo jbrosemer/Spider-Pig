@@ -47,7 +47,7 @@ try:
             if angle0 > 0:
                 angle0 -= 1
 
-        kit.servo[outerShoulderLeft].angle = angle0
+        kit.servo[outerElbowLeft].angle = angle0
 except KeyboardInterrupt:
     curses.nocbreak()
     screen.keypad(False)
