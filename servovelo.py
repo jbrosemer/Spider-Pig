@@ -9,7 +9,7 @@ def servovelo(timeelapsed, prevangle , newangle, servo):
     incrementalangle = prevangle
     increment = int(error/timeelapsed)
     while time.time() < end:
-            time.sleep(1)
+            print(int(time.time()))
             kit.servo[servo].angle = incrementalangle
             incrementalangle = incrementalangle + increment
     kit.servo[servo].angle = newangle
