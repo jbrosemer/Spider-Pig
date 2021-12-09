@@ -3,6 +3,7 @@ from adafruit_servokit import ServoKit
 # from pynput import keyboard
 kit = ServoKit(channels=16)
 def servovelo(timeelapsed, prevangle , newangle, servo):
+
     start = time.time()
     error = newangle - prevangle
     end = start + timeelapsed
@@ -12,8 +13,7 @@ def servovelo(timeelapsed, prevangle , newangle, servo):
     while time.time() < end:
         kit.servo[servo].angle = incrementalangle
         incrementalangle = incrementalangle + increment
-        time.sleep(1)
-    print('angle ' + str(newangle))
+        time.sleep(timeelapsed/error)
     kit.servo[servo].angle = newangle
 
 servovelo(5,10,50,0)
