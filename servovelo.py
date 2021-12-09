@@ -15,4 +15,4 @@ def servovelo(timeelapsed, prevangle , newangle, servo):
     kit.servo[servo].angle = newangle
 
 
-servovelo(5,90,180,0)
+servovelo(5,90,100,0)
