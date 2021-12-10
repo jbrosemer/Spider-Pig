@@ -16,4 +16,4 @@ def servovelo(timeelapsed, prevangle , newangle, servo):
         incrementalangle += 1
     kit.servo[servo].angle = newangle
 
-servovelo(0.5,20,20,0)
+servovelo(0.5,20,180,0)
