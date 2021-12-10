@@ -21,4 +21,4 @@ def servovelo(timeelapsed, prevangle , newangle, servo):
 
 kit.servo[0].angle = 180
 time.sleep(1)
-servovelo(0.5,180,20,0)
+servovelo(0.1,180,20,0)
