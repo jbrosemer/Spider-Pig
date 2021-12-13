@@ -1,4 +1,5 @@
 from adafruit_servokit import ServoKit
+import time
 # from pynput import keyboard
 kit = ServoKit(channels=16)
 # SERVO INT DEFINITIONS
@@ -61,9 +62,12 @@ try:
             if angle6 > 0:
                 angle6 -= 1
 
-        kit.servo[innerShoulderLeft].angle = angle4
-        kit.servo[innerElbowLeft].angle = angle5
-        kit.servo[innerWristLeft].angle = angle6
+        kit.servo[outerShoulderLeft].angle = angle4
+        time.sleep(1)
+        kit.servo[outerElbowLeft].angle = angle5
+        time.sleep(1)
+        kit.servo[outerWristLeft].angle = angle6
+        time.sleep(1)
 except KeyboardInterrupt:
     curses.nocbreak()
     screen.keypad(False)
