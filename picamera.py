@@ -1,0 +1,8 @@
+from picamera import PiCamera
+import pigpio
+from datetime import datetime
+camera = PiCamera()
+def capture():
+    timestamp = datetime.no().isoformat()
+    camera.capture('/home/pi%s.jpg' % timestamp)
+capture()
