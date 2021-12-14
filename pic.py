@@ -1,4 +1,4 @@
-from pic import PiCamera
+from picamera import PiCamera
 import pigpio
 from datetime import datetime
 camera = PiCamera()
