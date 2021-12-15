@@ -3,7 +3,7 @@ from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 # SERVO INT DEFINITIONS
 # OUTER ARMS
-
+import time
 import curses
 
 screen = curses.initscr()
@@ -49,6 +49,7 @@ angle8 = 90
 angle9 = 90
 angle10 = 90
 angle11 = 90
+first = True
 try:
     while True:
         char = screen.getch()
@@ -137,6 +138,36 @@ try:
             if angle11 > 0:
                 angle11 -= 10
 
+        if first:
+            kit.servo[outerShoulderLeft].angle = angle0
+            time.sleep(1)
+            kit.servo[outerElbowLeft].angle = angle1
+            time.sleep(1)
+            kit.servo[outerWristLeft].angle = angle2
+            time.sleep(1)
+
+            kit.servo[innerShoulderLeft].angle = angle3
+            time.sleep(1)
+            kit.servo[innerElbowLeft].angle = angle4
+            time.sleep(1)
+            kit.servo[innerWristLeft].angle = angle5
+            time.sleep(1)
+
+            kit.servo[innerShoulderRight].angle = angle6
+            time.sleep(1)
+            kit.servo[innerElbowRight].angle = angle7
+            time.sleep(1)
+            kit.servo[innerWristRight].angle = angle8
+            time.sleep(1)
+
+            kit.servo[outerShoulderRight].angle = angle9
+            time.sleep(1)
+            kit.servo[outerElbowRight].angle = angle10
+            time.sleep(1)
+            kit.servo[outerWristRight].angle = angle11
+            time.sleep(1)
+        first = False
+
         kit.servo[outerShoulderLeft].angle = angle0
         kit.servo[outerElbowLeft].angle = angle1
         kit.servo[outerWristLeft].angle = angle2
@@ -152,6 +183,7 @@ try:
         kit.servo[outerShoulderRight].angle = angle9
         kit.servo[outerElbowRight].angle = angle10
         kit.servo[outerWristRight].angle = angle11
+
         #DO A PULLUP
         #SERVOS THAT SHOULD BE PAIRED
         #ALL SHOULDERS TURN CLOCKWISE
