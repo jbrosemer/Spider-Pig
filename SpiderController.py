@@ -150,6 +150,7 @@ try:
 
             kit.servo[innerShoulderLeft].angle = angle3
             time.sleep(1)
+            """
             kit.servo[innerElbowLeft].angle = angle4
             time.sleep(1)
             kit.servo[innerWristLeft].angle = angle5
@@ -168,6 +169,7 @@ try:
             time.sleep(1)
             kit.servo[outerWristRight].angle = angle11
             time.sleep(1)
+            """
         first = False
 
         kit.servo[outerShoulderLeft].angle = angle0
