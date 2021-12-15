@@ -77,11 +77,11 @@ try:
             print(angle6)
             time.sleep(1)
         first = False
-        kit.servo[outerShoulderLeft].angle = angle4
+        kit.servo[innerShoulderRight].angle = angle4
         print('Shoulder' + str(angle4))
-        kit.servo[outerElbowLeft].angle = angle5
+        kit.servo[innerElbowRight].angle = angle5
         print('elbow' + str(angle5))
-        kit.servo[outerWristLeft].angle = angle6
+        kit.servo[innerWristRight].angle = angle6
         print('Wrist' + str(angle6))
 except KeyboardInterrupt:
     curses.nocbreak()

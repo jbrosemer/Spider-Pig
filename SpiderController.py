@@ -42,12 +42,12 @@ angle1 = 125
 angle2 = 117
 angle3 = 171
 angle4 = 90
-"""
 angle5 = 90
 angle6 = 90
 angle7 = 90
 angle8 = 90
 angle9 = 90
+"""
 angle10 = 90
 angle11 = 90
 """
@@ -152,7 +152,6 @@ try:
             time.sleep(1)
             kit.servo[innerElbowLeft].angle = angle4
             time.sleep(1)
-            """
             kit.servo[innerWristLeft].angle = angle5
             time.sleep(1)
 
@@ -162,7 +161,7 @@ try:
             time.sleep(1)
             kit.servo[innerWristRight].angle = angle8
             time.sleep(1)
-
+            """
             kit.servo[outerShoulderRight].angle = angle9
             time.sleep(1)
             kit.servo[outerElbowRight].angle = angle10
@@ -178,7 +177,6 @@ try:
 
         kit.servo[innerShoulderLeft].angle = angle3
         kit.servo[innerElbowLeft].angle = angle4
-        """
         kit.servo[innerWristLeft].angle = angle5
 
         kit.servo[innerShoulderRight].angle = angle6
@@ -186,6 +184,7 @@ try:
         kit.servo[innerWristRight].angle = angle8
 
         kit.servo[outerShoulderRight].angle = angle9
+        """
         kit.servo[outerElbowRight].angle = angle10
         kit.servo[outerWristRight].angle = angle11
         """
