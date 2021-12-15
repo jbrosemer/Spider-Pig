@@ -175,6 +175,7 @@ try:
         kit.servo[outerWristLeft].angle = angle2
 
         kit.servo[innerShoulderLeft].angle = angle3
+        """
         kit.servo[innerElbowLeft].angle = angle4
         kit.servo[innerWristLeft].angle = angle5
 
@@ -185,7 +186,7 @@ try:
         kit.servo[outerShoulderRight].angle = angle9
         kit.servo[outerElbowRight].angle = angle10
         kit.servo[outerWristRight].angle = angle11
-
+        """
         #DO A PULLUP
         #SERVOS THAT SHOULD BE PAIRED
         #ALL SHOULDERS TURN CLOCKWISE
