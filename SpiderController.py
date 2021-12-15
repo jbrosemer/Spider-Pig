@@ -37,10 +37,11 @@ innerWristLeft = 5
 innerWristRight = 8
 
 
-angle0 = 90
-angle1 = 90
-angle2 = 90
-angle3 = 90
+angle0 = 58
+angle1 = 125
+angle2 = 117
+angle3 = 171
+"""
 angle4 = 90
 angle5 = 90
 angle6 = 90
@@ -49,6 +50,7 @@ angle8 = 90
 angle9 = 90
 angle10 = 90
 angle11 = 90
+"""
 first = True
 try:
     while True:
