@@ -36,6 +36,10 @@ innerElbowRight = 7
 # INNER WRISTS
 innerWristLeft = 5
 innerWristRight = 8
+angle0 = 58
+angle1 = 125
+angle2 = 117
+angle3 = 171
 angle4 = 90
 angle5 = 90
 angle6 = 90
@@ -67,13 +71,13 @@ try:
             if angle6 > 0:
                 angle6 -= 1
         if first:
-            kit.servo[outerShoulderRight].angle = angle4
+            kit.servo[innerShoulderRight].angle = angle4
             print(angle4)
             time.sleep(1)
-            kit.servo[outerElbowRight].angle = angle5
+            kit.servo[innerElbowRight].angle = angle5
             print(angle5)
             time.sleep(1)
-            kit.servo[outerWristRight].angle = angle6
+            kit.servo[innerWristRight].angle = angle6
             print(angle6)
             time.sleep(1)
         first = False
