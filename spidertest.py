@@ -6,7 +6,7 @@ kit = ServoKit(channels=16)
 # OUTER ARMS
 
 import curses
-
+first = True
 screen = curses.initscr()
 curses.noecho()
 curses.cbreak()
@@ -61,16 +61,22 @@ try:
         if char == ord('e'):
             if angle6 > 0:
                 angle6 -= 1
-
+        if first:
+            kit.servo[outerShoulderLeft].angle = angle4
+            print(angle4)
+            time.sleep(1)
+            kit.servo[outerElbowLeft].angle = angle5
+            print(angle5)
+            time.sleep(1)
+            kit.servo[outerWristLeft].angle = angle6
+            print(angle6)
+            time.sleep(1)
         kit.servo[outerShoulderLeft].angle = angle4
         print(angle4)
-        time.sleep(1)
         kit.servo[outerElbowLeft].angle = angle5
         print(angle5)
-        time.sleep(1)
         kit.servo[outerWristLeft].angle = angle6
         print(angle6)
-        time.sleep(1)
 except KeyboardInterrupt:
     curses.nocbreak()
     screen.keypad(False)
