@@ -63,10 +63,13 @@ try:
                 angle6 -= 1
 
         kit.servo[outerShoulderLeft].angle = angle4
+        print(angle4)
         time.sleep(1)
         kit.servo[outerElbowLeft].angle = angle5
+        print(angle5)
         time.sleep(1)
         kit.servo[outerWristLeft].angle = angle6
+        print(angle6)
         time.sleep(1)
 except KeyboardInterrupt:
     curses.nocbreak()
