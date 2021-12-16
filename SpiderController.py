@@ -40,13 +40,27 @@ innerWristRight = 8
 angle0 = 58
 angle1 = 125
 angle2 = 117
-angle3 = 171
-angle4 = 90
+angle3 = 180
+angle4 = 27
 angle5 = 90
-angle6 = 90
-angle7 = 90
-angle8 = 90
-angle9 = 90
+angle6 = 0
+angle7 = 150
+angle8 = 72
+angle9 = 45
+angle10 = 65
+angle11 = 47
+#outerleftshoulder 58
+#outerleftelbow 122
+#outerleftwrist 117
+#innerleftshoulder 180
+#innerleftelbow 27
+#innerleftwrist 90
+#innerrightshoulder 0
+#innerrightelbow 150
+#innerrightwrist 72
+#outerrightshoulder 45
+#outerrightelbow 65
+#outerrightwrist 47
 """
 angle10 = 90
 angle11 = 90
@@ -161,14 +175,14 @@ try:
             time.sleep(1)
             kit.servo[innerWristRight].angle = angle8
             time.sleep(1)
-            """
+
             kit.servo[outerShoulderRight].angle = angle9
             time.sleep(1)
             kit.servo[outerElbowRight].angle = angle10
             time.sleep(1)
             kit.servo[outerWristRight].angle = angle11
             time.sleep(1)
-            """
+
         first = False
 
         kit.servo[outerShoulderLeft].angle = angle0
@@ -184,10 +198,8 @@ try:
         kit.servo[innerWristRight].angle = angle8
 
         kit.servo[outerShoulderRight].angle = angle9
-        """
         kit.servo[outerElbowRight].angle = angle10
         kit.servo[outerWristRight].angle = angle11
-        """
         #DO A PULLUP
         #SERVOS THAT SHOULD BE PAIRED
         #ALL SHOULDERS TURN CLOCKWISE

@@ -48,7 +48,9 @@ angle6 = 90
 #outerleftshoulder 58
 #outerleftelbow 122
 #outerleftwrist 117
-#innerleftwrist 171
+#innerleftshoulder 180
+#innerleftelbow 27
+#innerleftwrist 90
 #innerrightshoulder 0
 #innerrightelbow 150
 #innerrightwrist 72
