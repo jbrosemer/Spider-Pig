@@ -86,10 +86,10 @@ try:
 
         if char == ord('d'):
             if angle2 < 180:
-                angle2 += 10
+                angle2 += 1
         if char == ord('e'):
             if angle2 > 0:
-                angle2 -= 10
+                angle2 -= 1
 
         if char == ord('f'):
             if angle3 < 180:
@@ -107,10 +107,10 @@ try:
 
         if char == ord('h'):
             if angle5 < 180:
-                angle5 += 10
+                angle5 += 1
         if char == ord('y'):
             if angle5 > 0:
-                angle5 -= 10
+                angle5 -= 1
 
         if char == ord('j'):
             if angle6 < 180:
@@ -128,10 +128,10 @@ try:
 
         if char == ord('l'):
             if angle8 < 180:
-                angle8 += 10
+                angle8 += 1
         if char == ord('o'):
             if angle8 > 0:
-                angle8 -= 10
+                angle8 -= 1
 
         if char == ord('z'):
             if angle9 < 180:
@@ -149,10 +149,10 @@ try:
 
         if char == ord('b'):
             if angle11 < 180:
-                angle11 += 10
+                angle11 += 1
         if char == ord('n'):
             if angle11 > 0:
-                angle11 -= 10
+                angle11 -= 1
 
         if first:
             kit.servo[outerShoulderLeft].angle = angle0
