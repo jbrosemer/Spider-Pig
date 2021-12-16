@@ -155,9 +155,9 @@ try:
                 angle11 -= 1
 
         if first:
-            """
             kit.servo[outerShoulderLeft].angle = angle0
             time.sleep(1)
+            """
             kit.servo[outerElbowLeft].angle = angle1
             time.sleep(1)
             kit.servo[outerWristLeft].angle = angle2
@@ -185,8 +185,8 @@ try:
             time.sleep(1)
 
         first = False
-        """
         kit.servo[outerShoulderLeft].angle = angle0
+        """
         kit.servo[outerElbowLeft].angle = angle1
         kit.servo[outerWristLeft].angle = angle2
         """
