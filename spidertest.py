@@ -42,9 +42,9 @@ angle1 = 125
 angle2 = 117
 """
 angle3 = 90
-angle4 = 90
-angle5 = 90
-angle6 = 90
+angle4 = 180
+angle5 = 180
+angle6 = 180
 #outerleftshoulder 58
 #outerleftelbow 122
 #outerleftwrist 117
