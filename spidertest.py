@@ -46,10 +46,9 @@ angle4 = 90
 angle5 = 90
 angle6 = 90
 #outerleftshoulder 58
-#outerleftelbow 125
+#outerleftelbow 122
 #outerleftwrist 117
 #innerleftwrist 171
-#
 try:
     while True:
         char = screen.getch()
@@ -73,21 +72,21 @@ try:
             if angle6 > 0:
                 angle6 -= 1
         if first:
-            kit.servo[outerShoulderLeft].angle = angle4
+            kit.servo[innerShoulderLeft].angle = angle4
             print(angle4)
             time.sleep(1)
-            kit.servo[outerElbowLeft].angle = angle5
+            kit.servo[innerElbowLeft].angle = angle5
             print(angle5)
             time.sleep(1)
-            kit.servo[outerWristLeft].angle = angle6
+            kit.servo[innerWristLeft].angle = angle6
             print(angle6)
             time.sleep(1)
         first = False
-        kit.servo[outerShoulderLeft].angle = angle4
+        kit.servo[innerShoulderLeft].angle = angle4
         print('Shoulder' + str(angle4))
-        kit.servo[outerElbowLeft].angle = angle5
+        kit.servo[innerElbowLeft].angle = angle5
         print('elbow' + str(angle5))
-        kit.servo[outerWristRight].angle = angle6
+        kit.servo[innerWristRight].angle = angle6
         print('Wrist' + str(angle6))
 
 except KeyboardInterrupt:
