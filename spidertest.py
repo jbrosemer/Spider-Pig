@@ -85,11 +85,11 @@ try:
             print(angle6)
             time.sleep(1)
         first = False
-        kit.servo[innerShoulderRight].angle = angle4
+        kit.servo[outerShoulderRight].angle = angle4
         print('Shoulder' + str(angle4))
-        kit.servo[innerElbowRight].angle = angle5
+        kit.servo[outerElbowRight].angle = angle5
         print('elbow' + str(angle5))
-        kit.servo[innerWristRight].angle = angle6
+        kit.servo[outerWristRight].angle = angle6
         print('Wrist' + str(angle6))
 
 except KeyboardInterrupt:
