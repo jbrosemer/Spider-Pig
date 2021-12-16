@@ -86,7 +86,7 @@ try:
         print('Shoulder' + str(angle4))
         kit.servo[innerElbowLeft].angle = angle5
         print('elbow' + str(angle5))
-        kit.servo[innerWristRight].angle = angle6
+        kit.servo[innerWristLeft].angle = angle6
         print('Wrist' + str(angle6))
 
 except KeyboardInterrupt:
