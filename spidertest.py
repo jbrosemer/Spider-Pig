@@ -42,7 +42,7 @@ angle1 = 125
 angle2 = 117
 """
 angle3 = 90
-angle4 = 180
+angle4 = 0
 angle5 = 180
 angle6 = 90
 #outerleftshoulder 58
